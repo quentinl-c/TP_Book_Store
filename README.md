@@ -12,7 +12,7 @@ mysql -u root -p
 ```
 ```sql
 DROP DATABASE IF EXISTS tp_jee;
-CREATE DATABASE IF NOT EXISTS tp_jee;
+CREATE DATABASE tp_jee;
 
 CREATE USER 'dbadmin'@'localhost' IDENTIFIED BY 'your_password';
 GRANT ALL PRIVILEGES ON tp_jee.* TO 'dbadmin'@'localhost';
