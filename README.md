@@ -69,4 +69,10 @@ Reproduire l'exemple présenter au tablea :
 * Transfomer le JavaBeans `Book.java` en `@Entity` (ajouter un champ `titre`, la clé primaire est l'`isbn`)
 * Écrire l'EJB `@Stateless` : `BooksDAO.java` permettant de gérer la persistance des entités `Book`.
 * Modifier les servlets `Welcome.java` & `ProcessPurchase.java`, ainsi que les JSP correspondantes
-* Intégrer une nouvelle fonctionnalité : l'ajout de livres dans l'application 
+* Intégrer une nouvelle fonctionnalité : l'ajout de livres dans l'application
+* Intégrer une autre nouvelle fonctionnalité : la création d'une facture dans la BD à la fin du checkout
+  * Créer une entité `Invoice` qui contient des entités `LineItem`
+  * Modifier la page JSP `checkout.jsp` pour y intégrer un formulaire (nom + adresse)
+  * Créer une servlet `ProcessInvoice.java` qui enregistrer le panier comme facture en BD
+  * Faire une page de remerciement
+
