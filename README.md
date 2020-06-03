@@ -1,7 +1,6 @@
 # TP Book Store
 
 ## Book Store 📚
-> Reprendre le TP Cart et implémenter la persistance des livres en base de données 
 
 ### Setup
 
@@ -34,11 +33,11 @@ INSERT INTO books (isbn, title, author, price) VALUES ('143022889X', 'Beginning 
     * Quel est le type de la relation entre l'entité  `LineItem` et l'entité `Book` ?
     * Implanter cette relation
     * Les champs ne doivent pas être `null`
-    * N'oubliez pas de déclarer la class dans le `persistence.xml`
+    * N'oubliez pas de déclarer la classe dans le `persistence.xml`
   * Compléter l'entité `Invoice` qui contient des entités `LineItem`
     * Quel est le type de la relation entre l'entité  `LineItem` et l'entité `Book` ?
     * Implanter cette relation
     * Les champs ne doivent pas être `null`
-    * N'oubliez pas de déclarer la class dans le `persistence.xml`
+    * N'oubliez pas de déclarer la classe dans le `persistence.xml`
   * Compléter la servlet `ProcessInvoice.java` qui enregistrer le panier comme facture en BD
   * Compléter la page de remerciement pour y intégrer les informations sur l'achat (cf. `[]` )
