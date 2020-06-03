@@ -1,4 +1,4 @@
-package com.polytechnancy.todolist.servlets;
+package com.polytechnancy.bookstore.servlets;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,9 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.polytechnancy.todolist.resources.Task;
-import com.polytechnancy.todolist.resources.TasksDAO;
-
+import com.polytechnancy.bookstore.data.dao.BooksDAO;
+import com.polytechnancy.bookstore.data.entities.Book;
 
 /**
  * Servlet implementation class Welcome
@@ -20,9 +19,11 @@ import com.polytechnancy.todolist.resources.TasksDAO;
 @WebServlet("/welcome")
 public class Welcome extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-     
+	
+	private final String url = "/WEB-INF/index.jsp";
+       
 	@EJB
-	private TasksDAO tasksDAO;
+	private BooksDAO booksDAO;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -35,15 +36,13 @@ public class Welcome extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "/WEB-INF/index.jsp";
-		List<Task> tasks = tasksDAO.findAll();
-		request.setAttribute("tasks", tasks);
+		List<Book> books = booksDAO.findAll();
+		request.setAttribute("books", books);
 
-		getServletContext()
-		.getRequestDispatcher(url).
+		getServletContext().
+		getRequestDispatcher(this.url).
 		forward(request, response);
 	}
-
 
 
 }
