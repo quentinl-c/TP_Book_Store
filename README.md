@@ -35,9 +35,10 @@ INSERT INTO books (isbn, title, author, price) VALUES ('143022889X', 'Beginning 
     * Les champs ne doivent pas être `null`
     * N'oubliez pas de déclarer la classe dans le `persistence.xml`
   * Compléter l'entité `Invoice` qui contient des entités `LineItem`
-    * Quel est le type de la relation entre l'entité  `LineItem` et l'entité `Book` ?
+    * Quel est le type de la relation entre l'entité  `Invoice` et l'entité `LineItem` ?
     * Implanter cette relation
     * Les champs ne doivent pas être `null`
     * N'oubliez pas de déclarer la classe dans le `persistence.xml`
+  * Créer un EJB `@Stateless` `InvoiceDAOImpl` qui implante `InvoiceDAO` 
   * Compléter la servlet `ProcessInvoice.java` qui enregistrer le panier comme facture en BD
   * Compléter la page de remerciement pour y intégrer les informations sur l'achat (cf. `[]` )
